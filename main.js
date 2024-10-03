@@ -2,6 +2,7 @@
 // Di tutti i numeri dispari, invece, calcola anche la media e stampala a schermo.
 
 let accumulo = 0;
+let tot_dispari = 0;
 
 while (true) {
 
@@ -16,11 +17,14 @@ if (numero >1 && numero <=20) {
             console.log(index + " è un numero pari.");
           } else {
             accumulo += index;
+            // La media si fa sul numero di elementi e non sul totale.
+            tot_dispari++;
+
           }
         
     } // for
-    let media = accumulo/numero;
-    
+    let media = accumulo/tot_dispari;
+  
     console.log("La media dei numeri dispari è: "+ media.toFixed(2));
     
     
